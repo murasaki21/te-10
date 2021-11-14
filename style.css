@@ -35,8 +35,8 @@ body {
   color: #FFd6FF;
   font-family:'Raleway', sans-serif;
   text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+  padding-top: 10px;
 }
 
 #space {
