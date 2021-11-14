@@ -50,7 +50,9 @@ function init() {
     1000
   );
   renderer = new THREE.WebGLRenderer();
-  renderer.setClearColor(0xdfdfdf);
+  //changes space color
+  renderer.setClearColor(0x000000);
+  //changes canvas size
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
   // Add scene to gltf.html
@@ -58,12 +60,12 @@ function init() {
 
   // Material to be added to preanimated model
   var newMaterial = new THREE.MeshStandardMaterial({
-    color: 0x2E5939
+    color: 0x99B9FF
   });
 
   // Load preanimated model, add material, and add it to the scene
   const loader = new GLTFLoader().load(
-    "./gltfs/animatedWave3.glb",
+    "./gltfs/AnimatedCrane.glb",
     function(gltf) {
       gltf.scene.traverse(function(child) {
         if (child.isMesh) {
@@ -74,7 +76,7 @@ function init() {
       mesh = gltf.scene;
       mesh.position.set(4, 0, 0);
       mesh.rotation.set(0, 0, 0);
-      mesh.scale.set(1, 1, 1);
+      mesh.scale.set(2, 2, 2);
       // Add model to scene
       scene.add(mesh);
       //Check for and play animation frames
@@ -92,12 +94,12 @@ function init() {
 
   // Material to be added to static model
   var newMaterial2 = new THREE.MeshStandardMaterial({
-    color: 0x6E2E99
+    color: 0xa96fd1
   });
 
   // Load static model, add material, and add it to the scene
   const loader2 = new GLTFLoader().load(
-    "./gltfs/animatedWave3.glb",
+    "./gltfs/AnimatedCrane.glb",
     function(gltf) {
       // Scan loaded model for mesh and apply defined material if mesh is present
       gltf.scene.traverse(function(child) {
@@ -139,16 +141,16 @@ function init() {
 
  // Add Text under models
  const loader3 = new FontLoader();
-				loader3.load( './assets/helvetiker_regular.typeface.json', function ( font ) {
+				loader3.load( './helvetiker_regular.typeface.json', function ( font ) {
           // Define font color
-					const color = 0x2E5999;
+					const color = 0x071369;
           // Define font material
 					const matDark = new THREE.LineBasicMaterial( {
 						color: color,
 						side: THREE.DoubleSide
 					} );
           // Generate and place left side text
-					const message = "Static Model";
+					const message = "Animated via JS";
 					const shapes = font.generateShapes( message, .5 );
 					const geometry = new THREE.ShapeGeometry( shapes );
 					geometry.computeBoundingBox();
@@ -159,7 +161,7 @@ function init() {
 					scene.add( text );
 
           // Generate and place right side text
-          const message2 = "Preanimated Model";
+          const message2 = "Animated via Blender";
 					const shapes2 = font.generateShapes( message2, .5 );
 					const geometry2 = new THREE.ShapeGeometry( shapes2 );
 					geometry2.computeBoundingBox();
