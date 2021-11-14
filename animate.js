@@ -129,7 +129,8 @@ function init() {
   controls.target.set(0, 0, -0.2);
 
   // Position our camera so we can see the shape
-  camera.position.z = 17;
+  camera.position.x = 8;
+  camera.position.z = 13;
 
   // Add a directional light to the scene
   const directionalLight = new THREE.DirectionalLight(0xffffff, 0.9);
