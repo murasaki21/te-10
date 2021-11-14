@@ -23,7 +23,7 @@ import {
 } from "/sourceJS/GLTFLoader.js";
 import {
   FontLoader
-} from "/sourceJS/FontLoader.js"
+} from "/sourceJS/FontLoader.js";
 
 let container, scene, camera, renderer, mesh, mesh2, mixer, controls, clock;
 
