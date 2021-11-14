@@ -17,13 +17,13 @@ import * as THREE from "./buildJS/three.module.js";
 // Import add-ons for glTF models, orbit controls, and font loader
 import {
   OrbitControls
-} from "./sourceJS/OrbitControls.js";
+} from "/sourceJS/OrbitControls.js";
 import {
   GLTFLoader
-} from "./sourceJS/GLTFLoader.js";
+} from "/sourceJS/GLTFLoader.js";
 import {
   FontLoader
-} from "./sourceJS/FontLoader.js"
+} from "/sourceJS/FontLoader.js"
 
 let container, scene, camera, renderer, mesh, mesh2, mixer, controls, clock;
 
