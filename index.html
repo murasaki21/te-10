@@ -1,30 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>te-10</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="style.css">
-	</head>
-
-	<body>
-		<h1>TE-10: three.JS</h1>
-		<br>
-
-		<a href="testCube.html">to test cube</a>
-		<br>
-
-		<a href="testParallax.html"> to test parallax</a>
-		<br>
-
-		<a href="testDynamic.html">to test dynamic</a>
-		<br>
-
-	</body>
-</html>-->
-
-<!-- -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,48 +9,53 @@
     <script src="/animate.js" type="module"></script>
   </head>
   <body>
-    <h1>Art 109 Three.js Animation Example</h1>
-    <h2>
-      Overview
-    </h2>
+    <h1>
+      TE-10: Three.JS
+    </h1>
+    <h3>
+      Flying Cranes
+    </h3>
 
-		<a href="testCube.html">to test cube</a>
+		<!--<a href="testCube.html">to test cube</a>
 		<br>
 
 		<a href="testParallax.html"> to test parallax</a>
 		<br>
 
 		<a href="testDynamic.html">to test dynamic</a>
-		<br>
+		<br>-->
 
     <p>
-      This is an example of a three.js scene that makes use of 2 glTF 3D models. The models are the same except that the green one was preanimated and the pink/purple one was animated manually in three.js.
-			<br />
-      <br />
+      This is a three.js scene that uses of glTF 3D models. The models are the same except that the blue one was preanimated and the pink one was also animated in three.js.
+			<br>
+      <br>
 
-			The preanimated model was animated in Blender and exported with the animation data. The static model was animated by changing it's scale over time in three.js.
-			<br />
-      <br />
+			The preanimated model (blue) was animated in Blender with its flapping wings and exported with the animation data. The static model's wings (pink) was also animated in blender, but the scale changing over time was done in three.js.
+			<br>
+      <br>
 
-			This example also makes use of the three.js FontLoader to add text in the space.
-      <br />
+      <b>*Because the wings are thin, you may need to rotate the view to see them</b>
+      <br>
+      <br>
 
-			This example uses server hosted versions of the core Three.js, glTF
-      Loader, Orbit Control, and Font Loader scripts. Documentation these can be viewed at:
-			<br />
+      This example also makes use of the three.js FontLoader to add text in the space (i.e. "Animated via JS" and "Animated via Blender").
+      <br>
+      <br>
+
+      <h3>-Controls-</h3>
+        <li>Left Mouse Button: Rotate</li>
+        <li>Mouse Scroll: Zoom In/Out</li>
+			<br>
+      
+      <h3>-Scripts Used-</h3>
+        <li>Three.js Core</li>
+        <li>Three.js glTF Loader</li>
+        <li>Three.js FontLoader</li>
+        <li>Three.js Orbital Control</li>
 
     </p>
 
-    <!--client6.js selects the div with an id of "space" and places the scene within it.-->
+    <!--animate.js selects the div with an id of "space" and places the scene within it.-->
     <div id="space"></div>
-
-    <p>
-      <br />
-      To add models and textures you will need to add them to your site. In the
-      case of this example, I added the model to the assests folder, the scene
-      script to the root of my server, and the add-on scripts (glTF loader and etc.)
-      to the "src" folder.
-      <br />
-    </p>
   </body>
 </html>
