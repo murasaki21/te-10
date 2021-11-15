@@ -144,7 +144,7 @@ function init() {
  const loader3 = new FontLoader();
 				loader3.load( './helvetiker_regular.typeface.json', function ( font ) {
           // Define font color
-					const color = 0x071369;
+					const color = 0x6E2E99;
           // Define font material
 					const matDark = new THREE.LineBasicMaterial( {
 						color: color,
